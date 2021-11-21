@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Divanshi Food Corner & Rooms</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/jquery.fancybox.min.css" rel="stylesheet" />
+    <link href="~/css/slick.css" rel="stylesheet" />
+    <link href="~/css/slick-theme.css" rel="stylesheet" />
+    <link href="~/css/aos.css" rel="stylesheet" />
+    <link href="~/css/User.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/images/gs-favicon.ico" type="image/x-icon" />
+    <link href="~/css/notify.css" rel="stylesheet" />
+    <link href="~/css/jquery.jnotify.css" rel="stylesheet" />
+    <link href="~/css/datepicker.css" rel="stylesheet" />
+
+</head>
+<body>
+    <form>
+        <header>
+            <section class="logo" data-aos="fade-left" data-aos-duration="1400">
+                <div id="nav-icon1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/images/Logo.png" class="img-responsive" alt="Divanshi Food Corner & Rooms" />
+                </a>
+            </section>
+
+            <section class="navmain">
+                <nav class="navbox">
+                    <ul class="clearfix">
+                        <li><a href="@Url.Action("Index", "Rooms")">Rooms</a></li>
+                        <li><a href="@Url.Action("Index", "Dining")">Dining</a></li>
+                        <li><a href="@Url.Action("Index", "Gallery")">Gallery</a></li>
+                        <li><a href="@Url.Action("Index", "ReachUs")">Reach Us</a></li>
+                    </ul>
+                </nav>
+                <button class="btnbook" type="button" data-toggle="modal" data-target="#popbook">Book Your Stay</button>
+            </section>
+        </header>
+        <div class="popbook_bx">
+            <!-- The Modal -->
+            <div class="modal fade" id="popbook">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <div class="alltext heading_b">
+                                <h2>Book Your Stay with Us!</h2>
+                            </div>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="popdx">
+                                <div id="booking" class="section">
+                                    <div class="section-center">
+                                        <div class="booking-form">
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Check In</span>
+                                                        <div class="position-relative">
+                                                            <i class="fa fa-calendar clter"></i>
+                                                            <input type="text" id="txtcheckin" class="form-control checkim datepicker" Placeholder="Start Date" data-date-end-date="-0d" AutoComplete="Off" />
+                                                            <span id="RequiredFieldValidator1" class="er-msg fltl" style="color:Red;display:none;">Field Should not be Empty</span>
+                                                            <span class="er-msg" style="margin: 20px 0px; font-size: 14px;" id="Emperr"></span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Check out</span>
+                                                        <div class="position-relative">
+                                                            <i class="fa fa-calendar clter"></i>
+
+                                                            <input type="text" id="txtcheckout" class="form-control datepicker1" Placeholder="End Date" data-date-end-date="-0d" AutoComplete="Off" />
+                                                            <span id="RequiredFieldValidator3" class="er-msg fltl" style="color:Red;display:none;">Field Should not be Empty</span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Rooms</span>
+                                                        <select id="DropDownRoom" class="form-control">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                            <option value="10+">10+</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Adults</span>
+                                                        <select id="DropDownAdult" class="form-control">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                            <option value="10+">10+</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Children</span>
+                                                        <select id="DropDownChildren" class="form-control">
+                                                            <option value="0">Select Children</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                            <option value="10+">10+</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <span class="form-label">Name</span>
+                                                <input id="txtname" class="form-control" type="text" placeholder="Enter Name" @*onkeypress="return onlyAlphabets(event);"*@ />
+                                                <span id="requiredname" class="er-msg" style="color:Red;visibility:hidden;">Name is Required</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <span class="form-label">Email Id</span>
+                                                <input id="txtemail" class="form-control" type="text" placeholder="Enter Email Id" />
+                                                <span id="requiredemail" class="er-msg" style="color:Red;visibility:hidden;">Email is Required</span>
+                                                <span id="regularEmail" class="er-msg" style="color:Red;visibility:hidden;">Enter valid email id</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <span class="form-label">Mobile No</span>
+                                                <input maxlength="10" id="txtmobile" class="form-control" type="text" placeholder="Enter Mobile No" onkeypress="return checkNumber(event);" />
+                                                <span id="requiredmobile" class="er-msg" style="color:Red;visibility:hidden;">Phone Number is Required</span>
+                                                <span id="Regularmobile" class="er-msg" style="color:Red;display:none;">Required 10 Numbers</span>
+                                            </div>
+
+                                            <div class="cap-sec">
+                                                <div class="cap-txt">
+                                                    <input type="text" value="7+1" id="txtCaptchaShow" disabled="disabled" class="aspNetDisabled inputbx" placeholder="Captch Code" />
+
+                                                </div>
+                                                <div class="cap-input position-relative">
+                                                    <input type="text" maxlength="2" id="txtvalidatecaptcha" class="inputbx" placeholder="Enter Sum" onkeypress="return checkNumber(event);" />
+                                                    <span class="star-er">*</span>
+                                                    <span id="RequiredCaptcha" class="er-msg" style="color:Red;display:none;">Enter captcha sum</span>
+
+                                                    <span id="CompareValidator1" class="er-msg" style="color:Red;display:none;">Enter Valid Captcha</span>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-btn text-center">
+                                                <input type="button" value="Book Now" id="btnsubmit" class="submit-btn" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @RenderBody()
+
+        <footer class="ft_bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3" data-aos="fade-left" data-aos-duration="1100">
+                        <div class="left_fwel">
+                            <img src="~/images/logo_f.png" class="img-fluid" alt="Divanshi Food Corner & Rooms" />
+                            <p>Welcome to Divanshi Food Corner & Rooms. We invite you to avail our lavish accommodation and facilities. With speciality rooms and comfort of personalised services, we at Divanshi Food Corner & Rooms, will dependably endeavour to make your stay most lovely and memorable.</p>
+                        </div>
+                        <div class="f_heading">
+                            <h3>Follow us</h3>
+                            <ul class="clearfix social_f d-flex">
+                                <li><a href="https://www.facebook.com/profile.php?id=100020239008763" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/goldensunrisehotels/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 col-lg-2" data-aos="fade-up" data-aos-duration="1100">
+                        <div class="f_heading">
+                            <h3>Site Links</h3>
+                            <ul class="clearfix nvb_f">
+
+                                <li>
+                                    <a href="@Url.Action("Index", "Rooms")">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 268.8 268.8" style="enable-background: new 0 0 268.8 268.8;" xml:space="preserve">
+                                        <g>
+                                        <path class="a_blc" d="M265.2,125.6l-80-80c-4.9-4.9-12.8-4.9-17.7,0c-4.9,4.9-4.9,12.8,0,17.7l58.7,58.7H12.5
+		c-6.9,0-12.5,5.6-12.5,12.5c0,6.9,5.6,12.5,12.5,12.5h213.7l-58.7,58.7c-4.9,4.9-4.9,12.8,0,17.7c2.4,2.4,5.6,3.7,8.8,3.7
+		s6.4-1.2,8.8-3.7l80-80C270.1,138.4,270.1,130.5,265.2,125.6z">
+                                            </path>
+                                        </g>
+                                    </svg>Rooms
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Dining")">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 268.8 268.8" style="enable-background: new 0 0 268.8 268.8;" xml:space="preserve">
+                                        <g>
+                                        <path class="a_blc" d="M265.2,125.6l-80-80c-4.9-4.9-12.8-4.9-17.7,0c-4.9,4.9-4.9,12.8,0,17.7l58.7,58.7H12.5
+		c-6.9,0-12.5,5.6-12.5,12.5c0,6.9,5.6,12.5,12.5,12.5h213.7l-58.7,58.7c-4.9,4.9-4.9,12.8,0,17.7c2.4,2.4,5.6,3.7,8.8,3.7
+		s6.4-1.2,8.8-3.7l80-80C270.1,138.4,270.1,130.5,265.2,125.6z">
+                                            </path>
+                                        </g>
+                                    </svg>Dining
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Gallery")">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 268.8 268.8" style="enable-background: new 0 0 268.8 268.8;" xml:space="preserve">
+                                        <g>
+                                        <path class="a_blc" d="M265.2,125.6l-80-80c-4.9-4.9-12.8-4.9-17.7,0c-4.9,4.9-4.9,12.8,0,17.7l58.7,58.7H12.5
+		c-6.9,0-12.5,5.6-12.5,12.5c0,6.9,5.6,12.5,12.5,12.5h213.7l-58.7,58.7c-4.9,4.9-4.9,12.8,0,17.7c2.4,2.4,5.6,3.7,8.8,3.7
+		s6.4-1.2,8.8-3.7l80-80C270.1,138.4,270.1,130.5,265.2,125.6z">
+                                            </path>
+                                        </g>
+                                    </svg>Gallery
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "ReachUs")">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 268.8 268.8" style="enable-background: new 0 0 268.8 268.8;" xml:space="preserve">
+                                        <g>
+                                        <path class="a_blc" d="M265.2,125.6l-80-80c-4.9-4.9-12.8-4.9-17.7,0c-4.9,4.9-4.9,12.8,0,17.7l58.7,58.7H12.5
+		c-6.9,0-12.5,5.6-12.5,12.5c0,6.9,5.6,12.5,12.5,12.5h213.7l-58.7,58.7c-4.9,4.9-4.9,12.8,0,17.7c2.4,2.4,5.6,3.7,8.8,3.7
+		s6.4-1.2,8.8-3.7l80-80C270.1,138.4,270.1,130.5,265.2,125.6z">
+                                            </path>
+                                        </g>
+                                    </svg>Reach Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3" data-aos="fade-down" data-aos-duration="1100">
+                        <div class="f_heading">
+                            <h3>How to contact us</h3>
+
+                            <ul class="clearfix contact_f">
+                                <li>
+                                    <span>Address</span>
+                                    <p>Divanshi Food Corner & Rooms, Village Dhar,PO -Shakraah (near low college) NH Manali Road ,Pin-171011</p>
+                                </li>
+                                <li>
+                                    <span>Phone</span>
+                                    <div class="link_f">
+                                        <span>For booking: </span>
+
+                                        <a href="tel:7018176489">+91-7018176489,</a>
+                                        <a href="tel:9857555550">+91-9857555550</a>
+                                        <hr />
+                                        <span>For complaint and suggestions:</span>
+                                        <a href="tel:9857555550">+91-9857555550</a>
+
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span>Email</span>
+                                    <div class="link_f">
+                                        <a href="mailto:Geetashitu@gmail.com">Geetashitu@gmail.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3" data-aos="fade-right" data-aos-duration="1100">
+                        <div class="f_heading">
+                            <h3>Stay up to date</h3>
+                            <div class="news_up">
+                                <span>Sign up for our newsletter</span>
+                                <div class="position-relative">
+
+                                    <input type="text" id="subtxtEmail" class="inputnw" placeholder="Email Address" />
+
+                                    <button type="button" id="Subscribe" value="submit" class="btnnw fa fa-envelope" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing"> </button>
+
+
+                                </div>
+                            </div>
+
+                            <div class="map_f">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6955.706585328489!2d79.475395!3d29.345295000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfbab9086af00d2a0!2sHotel%20Golden%20Sunrise!5e0!3m2!1sen!2sin!4v1615875599948!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btm_bg">
+                <div class="container">
+                    <div class="d-flex">
+                        <span>&#8471; Divanshi Food Corner & Rooms All Rights Reserved</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </form>
+</body>
+
+
+</html>
+
+@RenderSection("scripts", required: false)
+
+<script src="~/js/jquery.min.js"></script>
+@*<script src="~/js/popper.min.js"></script>*@
+<script src="~/js/bootstrap.min.js"></script>
+@*<script src="~/js/jquery.fancybox.min.js"></script>*@
+<script src="~/js/slick.min.js"></script>
+<script src="~/js/aos.js"></script>
+<script src="~/js/user.js"></script>
+<script src="~/js/prefix.js"></script>
+<script src="~/js/notify.js"></script>
+<script src="~/js/jquery.jnotify.js"></script>
+<script src="~/js/bootstrap-datepicker.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#popbook").modal({
+            show: false,
+            backdrop: 'static'
+        });
+
+
+        $('.datepicker').datepicker({
+            format: 'dd/mm/yyyy',
+            startDate: '0d',
+            endDate: '+2m +10d'
+
+        });
+        //$('.datepicker1').datepicker({
+        //    format: 'dd/mm/yyyy',
+        //    startDate: '0d',
+        //    endDate: '+2m +10d'
+        //});
+
+        $(".datepicker").change(function () {
+            var startDate = document.getElementById("txtcheckin").value;
+            var endDate = document.getElementById("txtcheckout").value;
+            var date_received = $(".datepicker").datepicker('getDate');
+            //if (Date.parse(endDate) <= Date.parse(startDate)) {
+            //    // alert("End date should be greater than Start date");
+            //    $("#Emperr").text("End date should be greater than Start date");
+            //    document.getElementById("txtcheckout").value = "";
+            //    return false;
+            //}
+            //else {
+            //    return true;
+            //}
+            $('.datepicker1').datepicker({
+                format: 'dd/mm/yyyy',
+                startDate: date_received,
+                endDate: '+2m +10d'
+            });
+
+        });
+
+    });
+</script>
+
+<script type="text/javascript">
+    function DisableButtons() {
+        document.getElementById("btnsubmit").disabled = true;
+    }
+    window.onbeforeunload = DisableButtons;
+
+</script>
+<script type="text/javascript">
+
+    var isSubmitted = false;
+
+    function preventMultipleSubmissions() {
+        debugger;
+        if (!isSubmitted) {
+
+            $('#btnsubmit').val('Submitting.. Plz Wait..');
+
+            isSubmitted = true;
+            $('#modal').modal('show');
+
+            return true;
+
+        }
+
+        else {
+            $('#modal').modal('show');
+            return false;
+
+        }
+
+    }
+
+</script>
+
+
+<script>
+    var $ = jQuery.noConflict(); $(document).ready(function () { $('#demo').carousel({ interval: 3000, cycle: true }); });
+    // ]]>
+    $(document).ready(function () {
+        $(".tab_as > ul > li").click(function () {
+            $('.tab_as > ul > li').removeClass('activetb ');
+            $(this).addClass('activetb');
+
+        });
+        $("#imgaw1").show();
+        $("#aw_cnt1").click(function () {
+            $("#imgaw1").show();
+            $("#imgaw2").hide();
+            $("#imgaw3").hide();
+        });
+
+        $("#aw_cnt2").click(function () {
+            $("#imgaw1").hide();
+            $("#imgaw2").show();
+            $("#imgaw3").hide();
+        });
+
+        $("#aw_cnt3").click(function () {
+            $("#imgaw1").hide();
+            $("#imgaw2").hide();
+            $("#imgaw3").show();
+        });
+
+        $('.sliderpro').slick({
+            slidesToShow: 3,
+            dots: true,
+
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 1150,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 700,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+
+            ]
+        });
+
+        $('.single-item').slick({
+            dots: true,
+            //autoplay: true,
+            autoplaySpeed: 2000,
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        AOS.init();
+        $('#nav-icon1').click(function () {
+            $(this).toggleClass('open');
+        });
+
+        $('#nav-icon1').click(function () {
+            $(".navbox").toggleClass('left0');
+        });
+        
+    });
+</script>

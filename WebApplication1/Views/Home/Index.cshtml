@@ -1,0 +1,465 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+<section class="banner">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/Home-Banner-1.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/Home-Banner-2.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/Home-Banner-3.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+</section>
+
+<div class="popbook_bx">
+    <!-- The Modal -->
+    @*<div class="modal fade" id="popbook">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+
+                    <div class="alltext heading_b">
+                        <h2>Book Your Stay with Us!</h2>
+                    </div>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="popdx">
+                        <div id="booking" class="section">
+                            <div class="section-center">
+                                <div class="booking-form">
+
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <span class="form-label">Check In</span>
+                                                <div class="position-relative">
+                                                    <i class="fa fa-calendar clter"></i>
+                                                    <input  type="text" id="txtcheckin" class="form-control checkim datepicker" Placeholder="Start Date" data-date-end-date="-0d" AutoComplete="Off" />
+                                                    <span id="RequiredFieldValidator1" class="er-msg fltl" style="color:Red;display:none;">Field Should not be Empty</span>
+                                                    <span class="er-msg" style="margin: 20px 0px; font-size: 14px;" id="Emperr"></span>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <span class="form-label">Check out</span>
+                                                <div class="position-relative">
+                                                    <i class="fa fa-calendar clter"></i>
+
+
+                                                    <input type="text" id="txtcheckout" class="form-control datepicker1" Placeholder="End Date" data-date-end-date="-0d" AutoComplete="Off" />
+                                                    <span id="RequiredFieldValidator3" class="er-msg fltl" style="color:Red;display:none;">Field Should not be Empty</span>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <span class="form-label">Rooms</span>
+                                                <select id="DropDownRoom" class="form-control">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="10+">10+</option>
+
+                                                </select>
+                                                <span class="select-arrow"></span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <span class="form-label">Adults</span>
+                                                <select id="DropDownAdult" class="form-control">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="10+">10+</option>
+
+                                                </select>
+                                                <span class="select-arrow"></span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <span class="form-label">Children</span>
+                                                <select id="DropDownChildren" class="form-control">
+                                                    <option value="0">Select Children</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="10+">10+</option>
+
+                                                </select>
+
+                                                <span class="select-arrow"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <span class="form-label">Name</span>
+                                        <input id="txtname" class="form-control" type="text" placeholder="Enter Name" onkeypress="return onlyAlphabets(event);" />
+                                        <span id="requiredname" class="er-msg" style="color:Red;visibility:hidden;">Name is Required</span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <span class="form-label">Email Id</span>
+
+                                        <input  id="txtemail" class="form-control" type="text" placeholder="Enter Email Id" />
+
+                                        <span id="requiredemail" class="er-msg" style="color:Red;visibility:hidden;">Email is Required</span>
+
+                                        <span id="regularEmail" class="er-msg" style="color:Red;visibility:hidden;">Enter valid email id</span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <span class="form-label">Mobile No</span>
+                                        <input maxlength="10" id="txtmobile" class="form-control" type="text" placeholder="Enter Mobile No" onkeypress="return checkNumber(event);" />
+                                        <span id="requiredmobile" class="er-msg" style="color:Red;visibility:hidden;">Phone Number is Required</span>
+
+                                        <span id="Regularmobile" class="er-msg" style="color:Red;display:none;">Required 10 Numbers</span>
+
+                                    </div>
+
+
+                                    <div class="cap-sec">
+                                        <div class="cap-txt">
+                                            <input type="text" value="7+1" id="txtCaptchaShow" disabled="disabled" class="aspNetDisabled inputbx" placeholder="Captch Code" />
+
+
+                                        </div>
+
+                                        <div class="cap-input position-relative">
+                                            <input type="text" maxlength="2" id="txtvalidatecaptcha" class="inputbx" placeholder="Enter Sum" onkeypress="return checkNumber(event);" />
+                                            <span class="star-er">*</span>
+                                            <span id="RequiredCaptcha" class="er-msg" style="color:Red;display:none;">Enter captcha sum</span>
+
+
+
+                                            <span id="CompareValidator1" class="er-msg" style="color:Red;display:none;">Enter Valid Captcha</span>
+
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-btn text-center">
+                                        <input type="button" value="Book Now" id="btnsubmit" class="submit-btn" />
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>*@
+</div>
+
+
+
+<section class="welcomebox">
+    <div class="imgor leftor" data-aos="fade-right" data-aos-duration="1100">
+        <img src="~/images/OurStory1.png" alt="Our Story" />
+    </div>
+    <div class="center_w clearfix">
+        <div class="sec_our" data-aos="fade-up" data-aos-duration="1100">
+            <div class="heading_all">
+                <h1>Our Story</h1>
+                <span>Divanshi Food Corner & Rooms</span>
+            </div>
+            <h5>
+                <span>A Welcoming Haven for</span>
+                <span>All Kind of Travelers and</span>
+                <span>Nature Lovers</span>
+            </h5>
+            <p>Welcome to Divanshi Food Corner & Rooms. We invite you to avail our lavish accommodation and facilities. With speciality rooms and comfort of personalised services, we at Divanshi Food Corner & Rooms, will dependably endeavour to make your stay most lovely and memorable. Be it the buzzing about of the late spring season, the merriments of harvest time, or the stillness of winter, Nainital is truly an experience for honeymooners, travel enthusiasts and the adventure-lovers.</p>
+
+            <div class="btnall text-center clearfix" data-aos="fade-down" data-aos-duration="1100">
+                <!--<a href="Experience.html" class="btnbook">Read More</a>-->
+            </div>
+        </div>
+
+
+    </div>
+    <div class="imgor rightor" data-aos="fade-right" data-aos-duration="1100">
+        <img src="~/images/OurStory2.png" alt="Our Story" />
+    </div>
+</section>
+<div class="clear"></div>
+<section class="roommain pt_eql">
+    <div class="container">
+        <div class="heading_all" data-aos="fade-down" data-aos-duration="1100">
+            <h2>Rooms</h2>
+            <!--<span>Divanshi Food Corner & Rooms</span>-->
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6 col-lg-6 offset-lg-3">
+                <div class="row" data-aos="fade-right" data-aos-duration="1100">
+
+                    <div class="col-md-12">
+                        <div class="roombox position-relative">
+                            <img src="~/images/roomb3.jpg" alt="Standard-Family-Room" />
+                            <div class="hover_room">
+                                <div class="rm_hr">
+                                    <h3>Standard Family Room</h3>
+                                    @*<a href="Standard-Family-Room.html">Check Details<i class="fa fa-angle-right ml-2"></i></a>*@
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-12" data-aos="fade-down" data-aos-duration="1100">
+                <div class="btnall text-center clearfix">
+                    <a href="@Url.Action("Index", "Rooms")" class="btnbook">View All Rooms</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="package_Box mt40">
+    <div class="container">
+        <div class="heading_all" data-aos="fade-down" data-aos-duration="1100">
+            <h2>Gallery</h2>
+            <span>Divanshi Food Corner & Rooms</span>
+        </div>
+        <div class="tab_gly clearfix" data-aos="fade-up" data-aos-duration="1100">
+
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="container tab-pane active">
+                    <div class="imagesflx">
+                        <ul class="clearfix ">
+                            <li>
+                                <a href="~/images/Gallery1.jpg" data-fancybox="images" data-caption="">
+                                    <img src="~/images/Gallery1.jpg" alt="Trek View" />
+                                    <div class="hover_gly">
+                                        <div class="gly_htext">
+                                            <i class="fa fa-search-plus"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="textgl">
+                                        <span></span>
+                                        <h5>Food&nbsp;Corner</h5>
+                                        <span></span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="~/images/Gallery2.jpg" data-fancybox="images" data-caption="">
+                                    <img src="~/images/Gallery2.jpg" alt="Exterior" />
+                                    <div class="hover_gly">
+                                        <div class="gly_htext">
+                                            <i class="fa fa-search-plus"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="textgl">
+                                        <span></span>
+                                        <h5>Exterior</h5>
+                                        <span></span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="~/images/Gallery3.jpg" data-fancybox="images" data-caption="">
+                                    <img src="~/images/Gallery3.jpg" alt="Panaromic View" />
+                                    <div class="hover_gly">
+                                        <div class="gly_htext">
+                                            <i class="fa fa-search-plus"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="textgl">
+                                        <span></span>
+                                        <h5>Dinner&nbsp;&&nbsp;Lunch&nbsp;Point</h5>
+                                        <span></span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="~/images/Gallery4.jpg" data-fancybox="images" data-caption="">
+                                    <img src="~/images/Gallery4.jpg" alt="Sunset" />
+                                    <div class="hover_gly">
+                                        <div class="gly_htext">
+                                            <i class="fa fa-search-plus"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="textgl">
+                                        <span></span>
+                                        <h5>Shop</h5>
+                                        <span></span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="~/images/Gallery5.jpg" data-fancybox="images" data-caption="">
+                                    <img src="~/images/Gallery5.jpg" alt="Room" />
+                                    <div class="hover_gly">
+                                        <div class="gly_htext">
+                                            <i class="fa fa-search-plus"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="textgl">
+                                        <span></span>
+                                        <h5>Open Tables</h5>
+                                        <span></span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="~/images/Gallery6.jpg" data-fancybox="images" data-caption="">
+                                    <img src="~/images/Gallery6.jpg" alt="Room Angle 4" />
+                                    <div class="hover_gly">
+                                        <div class="gly_htext">
+                                            <i class="fa fa-search-plus"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="textgl">
+                                        <span></span>
+                                        <h5>Open&nbsp;Tables</h5>
+                                        <span></span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="btnall text-center clearfix" data-aos="fade-up" data-aos-duration="1100">
+        <a href="@Url.Action("Index", "Gallery")" class="btnbook">View All</a>
+    </div>
+</section>
+
+
+<section class="testimonial_box bg_backall">
+    <div class="container">
+        <div class="heading_all whtcl" data-aos="fade-down" data-aos-duration="1100">
+            <h2>Testimonials</h2>
+            <span>Divanshi Food Corner & Rooms</span>
+        </div>
+
+        <div class="single-item">
+            <div>
+                <div class="test-box">
+                    <div class="imgtest">
+                        <img src="~/images/profile-1.jpg" />
+                    </div>
+                    <div class="test-content">
+                        <h3>Deepika Sharma <span>(Stayed 4 Jun, 2020)</span></h3>
+
+                        <p>
+                            Hotel was quiet nice and living in room was very comfortable. I don't have words for food Quality as it was so delicious. Servicing and behavior of staff was excellent. Only one improvement required cleaning outside the room and bathroom accessories was not up to the mark. Otherwise awesome location pleasant stay. Thank you sunrise staff for everything.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <div class="test-box">
+                    <div class="imgtest">
+                        <img src="~/images/profile-1.jpg" />
+                    </div>
+                    <div class="test-content">
+                        <h3>Nisha Jha <span>(Stayed 2 Sep, 2021) </span></h3>
+
+                        <p>Hotel is just awsum. Rooms are really clean and nice with good scenic view. hotel staff is really helpful and coopreative food quality is good overall it's was good experience with Divanshi Food Corner & Rooms.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
