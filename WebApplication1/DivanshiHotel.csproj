@@ -266,6 +266,7 @@
     <Content Include="images\WhatsApp Image 2021-10-24 at 14.53.02%281%29.jpeg" />
     <Content Include="images\WhatsApp Image 2021-10-24 at 14.53.03.jpeg" />
     <Content Include="images\WhatsApp Image 2021-10-24 at 14.53.04%281%29.jpeg" />
+    <Content Include="index.html" />
     <Content Include="js\aos.js" />
     <Content Include="js\bootstrap-datepicker.js" />
     <Content Include="js\bootstrap.min.js" />

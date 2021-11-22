@@ -12,7 +12,7 @@ namespace WebApplication1.Controllers
     public class HomeController : Controller
     {
         public static string FromEmail= "info@divanshifoodsnrooms.com";
-        public static string AdminMail= "kmr.rishabh6190@gmail.com";
+        public static string AdminMail= "Geetashitu@gmail.com";
         public static string SubjectContactUs= "User Contact Us Mail";
         public static string SubjectForUserBooking = "User Booking Confimation Mail";
         public static string SubjectForSubscription = "User Subscription Mail";
